@@ -52,6 +52,7 @@ public class Triangle extends Shape{
         this.side3 = side3;
     }
     
+    
     @Override
     public double area(){
         double semi = (side1 + side2 + side3)/2;
@@ -59,6 +60,7 @@ public class Triangle extends Shape{
         double area = sqrt(temp);
         return area;
     }
+    
     
     @Override
     public double perimeter(){

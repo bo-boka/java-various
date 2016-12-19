@@ -63,7 +63,6 @@ public class AccountController {
             accountData[0].deposit(money);
         } else if (type.equalsIgnoreCase("Savings")){
             accountData[1].deposit(money);
-//            accountData[1].chargeWithdrawFee(accountData[1]); //won't let me have extra method in Savings that's not in Account interface??
         }
         return accountData;
     }

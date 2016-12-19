@@ -24,7 +24,7 @@ public class ProductController {
     InventoryDao dao;
     boolean keepGoing = true;
     
-    public void run(){ //5 doesn't work
+    public void run(){ 
         
         console = new ConsoleIO();
         dao = new InventoryDao();
@@ -49,7 +49,7 @@ public class ProductController {
                     getProductValue();
                     break;
                 case 5:
-                    getTotalValue();
+                    getTotalValue(); //needs work
                     break;
                 case 6:
                     try {
