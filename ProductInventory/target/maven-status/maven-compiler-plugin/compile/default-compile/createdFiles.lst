@@ -1,0 +1,9 @@
+com/tsguild/productinventory/dto/Shirt.class
+com/tsguild/productinventory/dto/Product.class
+com/tsguild/productinventory/ops/ProductController.class
+com/tsguild/productinventory/dto/Hat.class
+com/tsguild/productinventory/dto/Pants.class
+com/tsguild/productinventory/dao/InventoryDao.class
+com/tsguild/productinventory/ui/ConsoleIO.class
+com/tsguild/productinventory/ProductInventoryApp.class
+com/tsguild/productinventory/dto/Shoes.class

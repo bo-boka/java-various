@@ -1,0 +1,5 @@
+Hat::1::5::15.0::4::true
+Shirt::2::22::45.75::2::true::true
+Pants::3::38::55.9::7
+Shoes::4::9::34.87::4::wide
+Shirt::5::32::39.99::6::false::false
