@@ -13,7 +13,7 @@ import java.util.Random;
  *
  * @author Sarah
  */
-public class ExactSumCombo {
+public class RandomComboToTen {
     
     public static void main(String[] args) {
         
@@ -33,7 +33,6 @@ public class ExactSumCombo {
         for (int i = 0; i < combo.size(); i++) {
             System.out.println(combo.get(i));
         }
-        //put each combo into an arraylist within an arraylist. 
-        //6 .... 6, 5+1, 4+2, 4+1+1, 3+3, 3+2+1, 3+1+1+1, 2+2+1+1, 2+2+2, 1+1+1+1+2, 1+1+1+1+1+1
+        
     }
 }

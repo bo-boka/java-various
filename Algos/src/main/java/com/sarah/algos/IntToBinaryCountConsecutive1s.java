@@ -30,7 +30,7 @@ public class IntToBinaryCountConsecutive1s {
                 bi += n%2;
                 n = n/2;
             }
-//            bi += 0;
+
             for (int i = 0; i < bi.length(); i++){
                 if (bi.charAt(i) == '1') {
                     count++;              

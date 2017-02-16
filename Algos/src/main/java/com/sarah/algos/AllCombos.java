@@ -14,23 +14,26 @@ import java.util.Arrays;
  */
 public class AllCombos {
     
-    public static void sum_rec(ArrayList<Integer> sides, int target){
+    public static void sum_rec(int sides, int target){
         ArrayList<Integer> combo;
-        ArrayList<ArrayList> perms = new ArrayList<>();
-        for (int j = 1; j <= target; j++) {
-            combo = new ArrayList<>();
-            for (int i = 0; i < (target/j); i++) {                
-                combo.add(j);           
+        if (target < sides) sides = target-1;
+        for (int j = 1; j <= sides; j++) {
+            combo = new ArrayList<>();           
+            for (int i = 0; i < (target/j); i++) { 
+                combo.add(sum_rec(6, j));           
             }
             if (target%j != 0) combo.add(target%j); 
             System.out.println(combo.toString());
-            
+//            for (int c : combo){
+//                sum_rec(6, c);
+//            }
         }        
         
     }
     
     public static void main(String[] args) {
-        Integer[] sides = {1, 2, 3, 4, 5, 6};
-        sum_rec(new ArrayList(Arrays.asList(sides)), 10);
+//        Integer[] sides = {1, 2, 3, 4, 5, 6};
+//        sum_rec(new ArrayList(Arrays.asList(sides)), 10);
+        sum_rec(6, 4);
     }
 }
