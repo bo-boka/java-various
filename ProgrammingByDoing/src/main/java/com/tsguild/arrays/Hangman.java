@@ -16,8 +16,8 @@ public class Hangman {
     
     static Random rand = new Random();
     public static Scanner sc = new Scanner(System.in);
-    static String[] wordList = {"abcdefg", "abcdefg", "abcdefg", "abcdefg", 
-                            "entropy", "abcdefg", "abcdefg", "abcdefg"};
+    static String[] wordList = {"abadefg", "abadefg", 
+                            "entropy", "abadefg"};
     static String wordChoice = wordList[rand.nextInt(wordList.length)];  
     static String[] word = new String[wordChoice.length()];
     static String guess;
@@ -26,18 +26,19 @@ public class Hangman {
     static int letterCount;
     static boolean keepGoing = true;
     
-    public static void main(String[] args) { //repeat letters, set missed guess instead of adding to word length, hasWon doesn't work
+    public static void main(String[] args) { 
         
         initDisplay();
         
         while(keepGoing) {
-            guess = playAndDisplay(wordChoice);
+            guess = playAndDisplay();
         
             int location = wordChoice.indexOf(guess);
             if (location == -1){
                 misses += guess;
             } else {
                 word[location] = guess;
+                wordChoice = wordChoice.substring(0, location) + "_" + wordChoice.substring(location+1);
             }
             guessCount++;
             
@@ -48,22 +49,19 @@ public class Hangman {
     
     public static boolean maxedAttempts(){
         int maxGuess = wordChoice.length() + 6;
-        if (guessCount == maxGuess) 
-            return false;
-        else return true;
+        return guessCount != maxGuess;
     }
     
     public static boolean hasWon(){
+        for (int i = 0; i < wordChoice.length(); i++){
+            if (wordChoice.charAt(i) != '_') return true;
+        }
+        System.out.println("Congrats!");
         for (String elem : word){
-            if (elem == "_") {
-                letterCount++;
-            }
+            System.out.print(elem+" ");
         }
-        if (letterCount == 0) {
-            System.out.println("Congrats!"); 
-            return false;
-        }
-        return true;
+        
+        return false;
     }
    
     
@@ -73,7 +71,7 @@ public class Hangman {
         }
     }
     
-    public static String playAndDisplay(String wordChoice){
+    public static String playAndDisplay(){
         
         System.out.println("\n+==+==+==+==+==+==+==+==+");
         System.out.print("\nWord: ");

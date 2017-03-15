@@ -5,7 +5,7 @@
  */
 package com.sarah.algos.binarytree;
 
-import com.sarah.algos.*;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
