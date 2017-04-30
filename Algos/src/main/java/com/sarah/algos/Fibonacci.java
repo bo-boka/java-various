@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Fibonacci {
     
     public static void main(String[] args){
-        
+        //enter index to get next value in sequence
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter sequence index: ");
         int n = scan.nextInt();
@@ -28,6 +28,7 @@ public class Fibonacci {
             c = a.add(b);
             a = b;
             b = c;
+            
         }
         System.out.println(c);
     }
