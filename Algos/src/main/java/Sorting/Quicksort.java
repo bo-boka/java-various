@@ -2,7 +2,7 @@
  *  Copyright 2017 SarahBoka
  */
 
-package com.sarah.algos;
+package Sorting;
 
 import java.util.Arrays;
 import java.util.Random;
