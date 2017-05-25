@@ -13,12 +13,18 @@ import java.util.Random;
 
 public class Quicksort {
     public static void main(String[] args) {
-        int[] a = {1, 6, 5, 3, 11, 2, 12, 4, 7}; 
-        System.out.println(Arrays.toString(quickSort(a)));
+        int[] a = {1, 1, 1, 2}; 
+        System.out.println(Arrays.toString(quickSort(a))); 
     }
     
     public static int[] quickSort(int[] arr){
-        if (arr.length == 1){ //base case for recursive call
+        //to sort arrays with repeat digits, check if array has all same
+        //also checks if array has 1 element
+        boolean sameOr1 = true;
+        for (int n : arr){
+            if (arr[0] != n) sameOr1 = false;
+        }
+        if (sameOr1){ //base case for recursive call
             return arr;
         } else {
             int pivot = arr[arr.length - 1];
@@ -49,12 +55,9 @@ public class Quicksort {
             for (i = 0; i < arr2.length; i++){
                     arr2[i] = arr[i+wall];
             }
-            
             System.out.println("sorted: "+Arrays.toString(arr));
             System.out.println("1 half: "+Arrays.toString(arr1));
             System.out.println("2 half: "+Arrays.toString(arr2));
-            
-//            return arr;
 //            recursive call on each side
             return addArrays(quickSort(arr1), quickSort(arr2));
         }
