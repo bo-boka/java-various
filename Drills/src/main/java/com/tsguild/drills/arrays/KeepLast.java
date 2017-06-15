@@ -19,6 +19,10 @@ public class KeepLast {
 //    keepLast({3}) -> {0, 3}
 
     public int[] keepLast(int[] numbers) {
-
+        if (numbers == null) return numbers;
+        int len = numbers.length;
+        int[] newArr = new int[len * 2];
+        newArr[newArr.length-1] = numbers[len-1];
+        return newArr;
     }
 }

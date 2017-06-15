@@ -5,13 +5,12 @@
 package Sorting;
 
 import java.util.Arrays;
-import java.util.Random;
 
 /*
  * @author Sarah
  */
 
-public class Quicksort {
+public class QuicksortLongVPivotLast {
     public static void main(String[] args) {
         int[] a = {1, 1, 1, 2}; 
         System.out.println(Arrays.toString(quickSortLongV(a))); 
