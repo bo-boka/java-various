@@ -9,6 +9,7 @@ package com.sarah.algos;
  */
 
 public class AnagramStrings {
+    // returns true if strings have matching letters in whatever order
     public static void main(String[] args) {
         String a = "abccd";
         String b = "bcadc";

@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 public class Merge2SortedArrays {
 
-//    Write a function that, give two sorted lists of integers, 
+//    Write a function that, given two sorted lists of integers, 
 //    returns the two lists merged together in a single ordered list. 
 //    Make the function as efficient as possible.
 //

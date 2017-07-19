@@ -10,10 +10,12 @@ package com.sarah.algos;
  * @author Sarah
  */
 public class MaxDiffInArray {
+    //prints out maximum difference of all elements
     public static void main(String[] args) {
         
         int[] elements = {1, 2, 5};
         
+        // INEFFICIENT --- instead, sort and compare adjacent values
         int len = elements.length - 1;
         int maximumDifference = 0;
         for (int  i = 0; i < len; i++){
